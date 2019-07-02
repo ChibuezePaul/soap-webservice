@@ -2,7 +2,7 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://webservice.fiusb.ci.infosys.com"
            targetNamespace="http://webservice.fiusb.ci.infosys.com" elementFormDefault="qualified">
 
-    <xs:element name="executeService">
+    <xs:element name="executeMandateService">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="arg_0_0" type="tns:arg_0_0"/>

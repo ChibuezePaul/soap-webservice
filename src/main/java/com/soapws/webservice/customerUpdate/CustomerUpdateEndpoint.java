@@ -13,9 +13,11 @@ public class CustomerUpdateEndpoint {
     @Autowired
     private CustomerUpdateRepository repository;
 
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeService01")
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeCustUpdateService")
     @ResponsePayload
-    public ExecuteServiceResponse getCustomAcctDetails(@RequestPayload ExecuteService request) {
+    public ExecuteServiceResponse getCustUpdateService(@RequestPayload ExecuteCustUpdateService request) {
+
+        System.out.println("I got here : " + this.getClass().getName());
 
         ExecuteServiceResponse response = new ExecuteServiceResponse();
 

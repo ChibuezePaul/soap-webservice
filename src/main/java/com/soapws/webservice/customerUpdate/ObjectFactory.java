@@ -9,6 +9,7 @@
 package com.soapws.webservice.customerUpdate;
 
 import javax.xml.bind.annotation.XmlRegistry;
+import javax.xml.datatype.DatatypeConfigurationException;
 
 
 /**

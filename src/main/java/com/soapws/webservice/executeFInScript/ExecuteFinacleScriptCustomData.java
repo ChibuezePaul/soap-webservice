@@ -8,6 +8,8 @@
 
 package com.soapws.webservice.executeFInScript;
 
+import org.springframework.stereotype.Component;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -39,8 +41,11 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "executeFinacleScript_CustomData", propOrder = {
     "signId",
     "successOrFailure",
-    "lienB2KId"
+    "lienB2KId",
+    "mainHol",
+    "prevHol"
 })
+@Component
 public class ExecuteFinacleScriptCustomData {
 
     @XmlElement(required = true)
@@ -49,6 +54,10 @@ public class ExecuteFinacleScriptCustomData {
     protected String successOrFailure;
     @XmlElement(name = "LienB2kId", required = true)
     protected String lienB2KId;
+    @XmlElement(name = "mainHol", required = true)
+    protected String mainHol;
+    @XmlElement(name = "prevHol", required = true)
+    protected String prevHol;
 
     /**
      * Gets the value of the signId property.
@@ -120,6 +129,52 @@ public class ExecuteFinacleScriptCustomData {
      */
     public void setLienB2KId(String value) {
         this.lienB2KId = value;
+    }
+ /**
+     * Gets the value of the mainHol property.
+     *
+     * @return
+     *     possible object is
+     *     {@link String }
+     *
+     */
+    public String getMainHol() {
+        return mainHol;
+    }
+
+    /**
+     * Sets the value of the mainHol property.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *
+     */
+    public void setMainHol(String value) {
+        this.mainHol = value;
+    }
+ /**
+     * Gets the value of the prevHol property.
+     *
+     * @return
+     *     possible object is
+     *     {@link String }
+     *
+     */
+    public String getPrevHol() {
+        return prevHol;
+    }
+
+    /**
+     * Sets the value of the prevHol property.
+     *
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *
+     */
+    public void setPrevHol(String value) {
+        this.prevHol = value;
     }
 
 }

@@ -13,6 +13,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.DatatypeConfigurationException;
 
 
 /**
@@ -43,6 +44,9 @@ public class ExecuteServiceResponse {
 
     @XmlElement(required = true)
     protected ExecuteServiceReturn executeServiceReturn = new ExecuteServiceReturn();
+
+    public ExecuteServiceResponse() {
+    }
 
     /**
      * Gets the value of the executeServiceReturn property.

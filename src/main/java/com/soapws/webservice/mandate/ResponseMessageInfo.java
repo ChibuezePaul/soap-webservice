@@ -8,6 +8,8 @@
 
 package com.soapws.webservice.mandate;
 
+import com.sun.org.apache.xerces.internal.jaxp.datatype.XMLGregorianCalendarImpl;
+
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -46,12 +48,12 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class ResponseMessageInfo {
 
     @XmlElement(name = "BankId", required = true)
-    protected String bankId;
+    protected String bankId = "01";
     @XmlElement(name = "TimeZone", required = true)
-    protected String timeZone;
+    protected String timeZone = " ";
     @XmlElement(name = "MessageDateTime", required = true)
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar messageDateTime;
+    protected XMLGregorianCalendar messageDateTime = new XMLGregorianCalendarImpl();
 
     /**
      * Gets the value of the bankId property.

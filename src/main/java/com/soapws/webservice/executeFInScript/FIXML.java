@@ -12,6 +12,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.DatatypeConfigurationException;
 
 
 /**
@@ -45,6 +46,9 @@ public class FIXML {
     protected Header header = new Header();
     @XmlElement(name = "Body", required = true)
     protected Body body = new Body();
+
+    public FIXML(){
+    }
 
     /**
      * Gets the value of the header property.

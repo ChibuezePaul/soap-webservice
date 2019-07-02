@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Body {
 
     @XmlElement(name = "SignatureAddResponse", required = true)
-    protected SignatureAddResponse signatureAddResponse;
+    protected SignatureAddResponse signatureAddResponse = new SignatureAddResponse();
 
     /**
      * Gets the value of the signatureAddResponse property.

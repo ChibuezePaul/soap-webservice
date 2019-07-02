@@ -13,9 +13,11 @@ public class MandateEndpoint {
     @Autowired
     private MandateRepository repository;
 
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeService")
+    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeMandateService")
     @ResponsePayload
-    public ExecuteServiceResponse getCustomAcctDetails(@RequestPayload ExecuteService request) {
+    public ExecuteServiceResponse getMandateService(@RequestPayload ExecuteMandateService request) {
+
+        System.out.println("I got here : " + this.getClass().getName());
 
         ExecuteServiceResponse response = new ExecuteServiceResponse();
 

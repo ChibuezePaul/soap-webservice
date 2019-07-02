@@ -42,9 +42,9 @@ import javax.xml.bind.annotation.XmlType;
 public class ExecuteFinacleScriptResponse {
 
     @XmlElement(name = "ExecuteFinacleScriptOutputVO", required = true)
-    protected ExecuteFinacleScriptOutputVO executeFinacleScriptOutputVO;
+    protected ExecuteFinacleScriptOutputVO executeFinacleScriptOutputVO = new ExecuteFinacleScriptOutputVO();
     @XmlElement(name = "executeFinacleScript_CustomData", required = true)
-    protected ExecuteFinacleScriptCustomData executeFinacleScriptCustomData;
+    protected ExecuteFinacleScriptCustomData executeFinacleScriptCustomData = new ExecuteFinacleScriptCustomData();
 
     /**
      * Gets the value of the executeFinacleScriptOutputVO property.

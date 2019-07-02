@@ -12,6 +12,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.DatatypeConfigurationException;
 
 
 /**
@@ -40,7 +41,10 @@ import javax.xml.bind.annotation.XmlType;
 public class Header {
 
     @XmlElement(name = "ResponseHeader", required = true)
-    protected ResponseHeader responseHeader;
+    protected ResponseHeader responseHeader = new ResponseHeader();
+
+    public Header() {
+    }
 
     /**
      * Gets the value of the responseHeader property.

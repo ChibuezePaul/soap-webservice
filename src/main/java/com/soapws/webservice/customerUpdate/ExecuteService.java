@@ -13,6 +13,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.DatatypeConfigurationException;
 
 
 /**
@@ -43,6 +44,9 @@ public class ExecuteService {
 
     @XmlElement(name = "arg_0_0", required = true)
     protected Arg00 arg00 = new Arg00();
+
+    public ExecuteService() {
+    }
 
     /**
      * Gets the value of the arg00 property.

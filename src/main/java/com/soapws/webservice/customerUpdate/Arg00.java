@@ -12,6 +12,7 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.DatatypeConfigurationException;
 
 
 /**
@@ -41,6 +42,9 @@ public class Arg00 {
 
     @XmlElement(name = "FIXML", required = true)
     protected FIXML fixml = new FIXML();
+
+    public Arg00() {
+    }
 
     /**
      * Gets the value of the fixml property.

@@ -210,6 +210,10 @@
     <Body>
         <executeFinacleScriptResponse>
             <ExecuteFinacleScriptOutputVO>
-            </ExecuteFinacleScriptOutputVO><executeFinacleScript_CustomData>
-            <SuccessOrFailure>SUCCESS</SuccessOrFailure><mainHol>YYNNNN</mainHol><prevHol>YYYYNNNNYYNNNNNYYNNNNNYYNNNNNY</prevHol></executeFinacleScript_CustomData>
+            </ExecuteFinacleScriptOutputVO>
+            <executeFinacleScript_CustomData>
+            <SuccessOrFailure>SUCCESS</SuccessOrFailure>
+                <mainHol>YYNNNN</mainHol>
+                <prevHol>YYYYNNNNYYNNNNNYYNNNNNYYNNNNNY</prevHol>
+            </executeFinacleScript_CustomData>
         </executeFinacleScriptResponse></Body></FIXML></executeServiceReturn></p594:executeServiceResponse></soapenv:Body></soapenv:Envelope>

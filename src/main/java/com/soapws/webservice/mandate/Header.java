@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Header {
 
     @XmlElement(name = "ResponseHeader", required = true)
-    protected ResponseHeader responseHeader;
+    protected ResponseHeader responseHeader = new ResponseHeader();
 
     /**
      * Gets the value of the responseHeader property.

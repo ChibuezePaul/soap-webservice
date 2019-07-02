@@ -42,9 +42,9 @@ import javax.xml.bind.annotation.XmlType;
 public class SignatureAddResponse {
 
     @XmlElement(name = "SignatureAddRs", required = true)
-    protected SignatureAddRs signatureAddRs;
+    protected SignatureAddRs signatureAddRs = new SignatureAddRs();
     @XmlElement(name = "SignatureAdd_CustomData", required = true)
-    protected String signatureAddCustomData;
+    protected String signatureAddCustomData = "";
 
     /**
      * Gets the value of the signatureAddRs property.

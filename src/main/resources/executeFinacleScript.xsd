@@ -2,7 +2,79 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://webservice.fiusb.ci.infosys.com"
            targetNamespace="http://webservice.fiusb.ci.infosys.com" elementFormDefault="qualified">
 
-    <xs:element name="executeService">
+    <xs:element name="executeLetterService">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="arg_0_0" type="tns:arg_0_0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="executeChannelService">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="arg_0_0" type="tns:arg_0_0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="executeChequeService">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="arg_0_0" type="tns:arg_0_0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="executeLienService">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="arg_0_0" type="tns:arg_0_0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="executeMandatesService">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="arg_0_0" type="tns:arg_0_0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="executeFreezeService">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="arg_0_0" type="tns:arg_0_0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="executeSchemeCodeService">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="arg_0_0" type="tns:arg_0_0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="executeNotificationService">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="arg_0_0" type="tns:arg_0_0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="executeMemoPadService">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="arg_0_0" type="tns:arg_0_0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="executeReactivationService">
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="arg_0_0" type="tns:arg_0_0"/>

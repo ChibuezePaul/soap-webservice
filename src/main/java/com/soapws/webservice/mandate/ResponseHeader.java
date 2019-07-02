@@ -50,17 +50,17 @@ import javax.xml.bind.annotation.XmlType;
 public class ResponseHeader {
 
     @XmlElement(name = "RequestMessageKey", required = true)
-    protected RequestMessageKey requestMessageKey;
+    protected RequestMessageKey requestMessageKey = new RequestMessageKey();
     @XmlElement(name = "ResponseMessageInfo", required = true)
-    protected ResponseMessageInfo responseMessageInfo;
+    protected ResponseMessageInfo responseMessageInfo = new ResponseMessageInfo();
     @XmlElement(name = "UBUSTransaction", required = true)
-    protected UBUSTransaction ubusTransaction;
+    protected UBUSTransaction ubusTransaction = new UBUSTransaction();
     @XmlElement(name = "HostTransaction", required = true)
-    protected HostTransaction hostTransaction;
+    protected HostTransaction hostTransaction = new HostTransaction();
     @XmlElement(name = "HostParentTransaction", required = true)
-    protected HostParentTransaction hostParentTransaction;
+    protected HostParentTransaction hostParentTransaction = new HostParentTransaction();
     @XmlElement(name = "CustomInfo", required = true)
-    protected String customInfo;
+    protected String customInfo = "";
 
     /**
      * Gets the value of the requestMessageKey property.
