@@ -53,13 +53,13 @@ public class ResponseHeader {
     @XmlElement(name = "RequestMessageKey", required = true)
     protected RequestMessageKey requestMessageKey;
     @XmlElement(name = "ResponseMessageInfo", required = true)
-    protected ResponseMessageInfo responseMessageInfo = new ResponseMessageInfo();
+    protected ResponseMessageInfo responseMessageInfo;
     @XmlElement(name = "UBUSTransaction", required = true)
-    protected UBUSTransaction ubusTransaction = new UBUSTransaction();
+    protected UBUSTransaction ubusTransaction;
     @XmlElement(name = "HostTransaction", required = true)
-    protected HostTransaction hostTransaction = new HostTransaction();
+    protected HostTransaction hostTransaction;
     @XmlElement(name = "HostParentTransaction", required = true)
-    protected HostParentTransaction hostParentTransaction = new HostParentTransaction();
+    protected HostParentTransaction hostParentTransaction;
     @XmlElement(name = "CustomInfo", required = true)
     protected String customInfo;
 

@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Body {
 
     @XmlElement(required = true)
-    protected ExecuteFinacleScriptResponse executeFinacleScriptResponse = new ExecuteFinacleScriptResponse();
+    protected ExecuteFinacleScriptResponse executeFinacleScriptResponse;
 
     /**
      * Gets the value of the executeFinacleScriptResponse property.

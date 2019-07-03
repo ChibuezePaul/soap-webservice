@@ -49,18 +49,17 @@ import java.util.GregorianCalendar;
 public class ResponseMessageInfo {
 
     @XmlElement(name = "BankId", required = true)
-    protected String bankId = "01";
+    protected String bankId;
     @XmlElement(name = "TimeZone", required = true)
-    protected String timeZone = " ";
+    protected String timeZone;
     @XmlElement(name = "MessageDateTime", required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar messageDateTime;
+    protected String messageDateTime;
 
     {
         try {
-            messageDateTime = DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar()).normalize();
+            messageDateTime = String.valueOf(DatatypeFactory.newInstance().newXMLGregorianCalendar(new GregorianCalendar()).normalize());
         } catch (DatatypeConfigurationException e) {
-            e.printStackTrace();
+            e.getMessage();
         }
     }
 
@@ -122,10 +121,10 @@ public class ResponseMessageInfo {
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getMessageDateTime() {
+    public String getMessageDateTime() {
         return messageDateTime;
     }
 
@@ -134,10 +133,10 @@ public class ResponseMessageInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setMessageDateTime(XMLGregorianCalendar value) {
+    public void setMessageDateTime(String value) {
         this.messageDateTime = value;
     }
 

@@ -42,9 +42,9 @@ import javax.xml.bind.annotation.XmlType;
 public class HostParentTransaction {
 
     @XmlElement(name = "Id", required = true)
-    protected String id = "";
+    protected String id;
     @XmlElement(name = "Status", required = true)
-    protected String status = "";
+    protected String status;
 
     /**
      * Gets the value of the id property.

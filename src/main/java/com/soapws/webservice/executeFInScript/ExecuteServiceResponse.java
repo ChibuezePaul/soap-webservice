@@ -43,7 +43,7 @@ import javax.xml.datatype.DatatypeConfigurationException;
 public class ExecuteServiceResponse {
 
     @XmlElement(required = true)
-    protected ExecuteServiceReturn executeServiceReturn = new ExecuteServiceReturn();
+    protected ExecuteServiceReturn executeServiceReturn;
 
     public ExecuteServiceResponse() {
     }

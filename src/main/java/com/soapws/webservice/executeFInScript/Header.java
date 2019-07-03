@@ -41,7 +41,7 @@ import javax.xml.datatype.DatatypeConfigurationException;
 public class Header {
 
     @XmlElement(name = "ResponseHeader", required = true)
-    protected ResponseHeader responseHeader = new ResponseHeader();
+    protected ResponseHeader responseHeader;
 
     public Header() {
     }

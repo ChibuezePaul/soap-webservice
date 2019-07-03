@@ -38,88 +38,95 @@ public class ExecFinScriptEndpoint {
         messageKey.setChannelId(channelId);
     }
 
+    ExecuteServiceResponse serviceResponse = new ExecuteServiceResponse();
+
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeChannelService")
     @ResponsePayload
     public ExecuteServiceResponse getChannelService(@RequestPayload ExecuteChannelService request) {
 
-        customData.setMainHol("YYNNNN");
-        customData.setPrevHol("YYYYNNNNYYNNNNNYYNNNNNYYNNNNNY");
+        serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1507286630051","CRM",null,null,"YYNNNN","YYYYNNNNYYNNNNNYYNNNNNYYNNNNNY"));
 
-        setRequestMessageKey("Req_1507286678884","CRM");
-
-        return getExecuteServiceResponse();
+        return serviceResponse;
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeChequeService")
     @ResponsePayload
     public ExecuteServiceResponse getChequeService(@RequestPayload ExecuteChequeService request) {
 
-        setRequestMessageKey("Req_1561732445354", "CRM");
-        return getExecuteServiceResponse();
+        serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1561732112117","CRM",null,null,null,null));
+
+        return serviceResponse;
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeLetterService")
     @ResponsePayload
     public ExecuteServiceResponse getLetterService(@RequestPayload ExecuteLetterService request) {
 
-        setRequestMessageKey("Req_1561733640958", "COR");
-        return getExecuteServiceResponse();
+        serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1561733640958","COR",null,null,null,null));
+
+        return serviceResponse;
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeLienService")
     @ResponsePayload
     public ExecuteServiceResponse getLienService(@RequestPayload ExecuteLienService request) {
 
-        customData.setLienB2KId("01183256054");
-        setRequestMessageKey("Req_1561732490688", "CRM");
-        return getExecuteServiceResponse();
+        serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1561732490688","CRM",null,"01183256055",null,null));
+
+        return serviceResponse;
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeFreezeService")
     @ResponsePayload
     public ExecuteServiceResponse getFreezeService(@RequestPayload ExecuteFreezeService request) {
 
-        setRequestMessageKey("Req_1561732016602", "CRM");
-        return getExecuteServiceResponse();
+        serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1561732016602","CRM",null,null,null,null));
+
+        return serviceResponse;
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeMandatesService")
     @ResponsePayload
     public ExecuteServiceResponse getMandatesService(@RequestPayload ExecuteMandatesService request) {
 
-        setRequestMessageKey("Req_1561731734654", "COR");
-        return getExecuteServiceResponse();
+        serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1561731734391","COR",null,null,null,null));
+
+        return serviceResponse;
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeNotificationService")
     @ResponsePayload
     public ExecuteServiceResponse getNotificationService(@RequestPayload ExecuteNotificationService request) {
 
-        setRequestMessageKey("Req_1507290067534", "COR");
-        return getExecuteServiceResponse();
+        serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1507290067534","COR",null,null,null,null));
+
+        return serviceResponse;
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeMemoPadService")
     @ResponsePayload
     public ExecuteServiceResponse getMemoPadService(@RequestPayload ExecuteMemoPadService request) {
 
-        setRequestMessageKey("Req_1506340714644", "COR");
-        return getExecuteServiceResponse();
+        serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1506340714644","COR",null,null,null,null));
+
+        return serviceResponse;
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeSchemeCodeService")
     @ResponsePayload
     public ExecuteServiceResponse getSchemeCodeService(@RequestPayload ExecuteSchemeCodeService request) {
 
-        setRequestMessageKey("Req_1561385949464", "COR");
-        return getExecuteServiceResponse();
+        serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1561385949464","COR",null,null,null,null));
+
+        return serviceResponse;
     }
 
     @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeReactivationService")
     @ResponsePayload
     public ExecuteServiceResponse getReactivationService(@RequestPayload ExecuteReactivationService request) {
 
-        setRequestMessageKey("Req_1507303907459", "COR");
-        return getExecuteServiceResponse();
+        serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1507303907459","COR",null,null,null,null));
+
+        return serviceResponse;
     }
 }

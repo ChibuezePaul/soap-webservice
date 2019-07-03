@@ -43,9 +43,9 @@ import javax.xml.datatype.DatatypeConfigurationException;
 public class FIXML {
 
     @XmlElement(name = "Header", required = true)
-    protected Header header = new Header();
+    protected Header header;
     @XmlElement(name = "Body", required = true)
-    protected Body body = new Body();
+    protected Body body;
 
     public FIXML(){
     }

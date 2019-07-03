@@ -25,7 +25,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	}
 
 	@Bean(name = "executeFinacleScript")
-	public DefaultWsdl11Definition executeFinacleScriptserviceWsdl11Definition(XsdSchema executeFinacleScriptservice) {
+	public DefaultWsdl11Definition executeFinacleScriptServiceWsdl11Definition(XsdSchema executeFinacleScriptservice) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("fiPort");
 		wsdl11Definition.setLocationUri("/fi");
@@ -40,7 +40,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	}
 
 	@Bean(name = "RetCustMod")
-	public DefaultWsdl11Definition RetCustMod(XsdSchema RetCustMod) {
+	public DefaultWsdl11Definition RetCustModServiceWsdl11Definition(XsdSchema RetCustMod) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("fiPort");
 		wsdl11Definition.setLocationUri("/fi");
@@ -55,7 +55,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	}
 
 	@Bean(name = "SignatureAdd")
-	public DefaultWsdl11Definition defaultWsdl11Definition(XsdSchema SignatureAdd) {
+	public DefaultWsdl11Definition SignatureAddServiceWsdl11Definition(XsdSchema SignatureAdd) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("fiPort");
 		wsdl11Definition.setLocationUri("/fi");

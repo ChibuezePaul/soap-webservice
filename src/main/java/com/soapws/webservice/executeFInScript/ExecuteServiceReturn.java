@@ -41,7 +41,7 @@ import javax.xml.datatype.DatatypeConfigurationException;
 public class ExecuteServiceReturn {
 
     @XmlElement(name = "FIXML", required = true)
-    protected FIXML fixml = new FIXML();
+    protected FIXML fixml;
 
     public ExecuteServiceReturn() {
     }
