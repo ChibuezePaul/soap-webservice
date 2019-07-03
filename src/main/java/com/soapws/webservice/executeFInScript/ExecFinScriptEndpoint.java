@@ -14,15 +14,13 @@ public class ExecFinScriptEndpoint {
     private ExecFinScriptRepository repository;
 
     ExecuteFinacleScriptCustomData customData;
-
-    public ExecFinScriptEndpoint(ExecuteFinacleScriptCustomData customData) {
-        customData.setSuccessOrFailure("SUCCESS");
-        this.customData = customData;
-    }
+//
+//    public ExecFinScriptEndpoint(ExecuteFinacleScriptCustomData customData) {
+//        customData.setSuccessOrFailure("SUCCESS");
+//        this.customData = customData;
+//    }
 
     protected ExecuteServiceResponse getExecuteServiceResponse() {
-
-        System.out.println("I got here : " + this.getClass().getName());
 
         ExecuteServiceResponse response;
         response = new ExecuteServiceResponse();

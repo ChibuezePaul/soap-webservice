@@ -15,7 +15,10 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
 import javax.xml.datatype.XMLGregorianCalendar;
+import java.util.GregorianCalendar;
 
 
 /**
@@ -52,8 +55,7 @@ public class ResponseMessageInfo {
     @XmlElement(name = "TimeZone", required = true)
     protected String timeZone = " ";
     @XmlElement(name = "MessageDateTime", required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar messageDateTime = new XMLGregorianCalendarImpl();
+    protected String messageDateTime = " ";
 
     /**
      * Gets the value of the bankId property.
@@ -108,10 +110,10 @@ public class ResponseMessageInfo {
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getMessageDateTime() {
+    public String getMessageDateTime() {
         return messageDateTime;
     }
 
@@ -120,10 +122,10 @@ public class ResponseMessageInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setMessageDateTime(XMLGregorianCalendar value) {
+    public void setMessageDateTime(String value) {
         this.messageDateTime = value;
     }
 

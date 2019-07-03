@@ -17,8 +17,6 @@ public class MandateEndpoint {
     @ResponsePayload
     public ExecuteServiceResponse getMandateService(@RequestPayload ExecuteMandateService request) {
 
-        System.out.println("I got here : " + this.getClass().getName());
-
         ExecuteServiceResponse response = new ExecuteServiceResponse();
 
         response.setExecuteServiceReturn(repository.setCustomAcctDetails());

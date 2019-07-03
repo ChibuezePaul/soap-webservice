@@ -17,8 +17,6 @@ public class CustomerUpdateEndpoint {
     @ResponsePayload
     public ExecuteServiceResponse getCustUpdateService(@RequestPayload ExecuteCustUpdateService request) {
 
-        System.out.println("I got here : " + this.getClass().getName());
-
         ExecuteServiceResponse response = new ExecuteServiceResponse();
 
         response.setExecuteServiceReturn(repository.setCustomAcctDetails());
