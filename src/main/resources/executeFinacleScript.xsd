@@ -84,7 +84,7 @@
 
     <xs:complexType name="arg_0_0">
         <xs:sequence>
-            <xs:element name="FIXML" type="tns:FIXML" xsi:schemaLocation="http://www.finacle.com/fixml executeFinacleScript.xsd"/>
+            <xs:element name="FIXML" type="tns:FIXML" xsi:schemaLocation=""/>
         </xs:sequence>
     </xs:complexType>
 
@@ -98,7 +98,7 @@
 
     <xs:complexType name="executeServiceReturn">
         <xs:sequence>
-            <xs:element name="FIXML" type="tns:FIXML" xsi:schemaLocation="http://www.finacle.com/fixml SignatureAdd.xsd"/>
+            <xs:element name="FIXML" type="tns:FIXML" xsi:schemaLocation=""/>
         </xs:sequence>
     </xs:complexType>
 
