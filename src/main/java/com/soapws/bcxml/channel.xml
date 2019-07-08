@@ -9,7 +9,7 @@
                     <arg_0_0>-->
         <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
             <Body>
-                <executeService xmlns="http://webservice.fiusb.ci.infosys.com">
+                <executeChannelService xmlns="http://webservice.fiusb.ci.infosys.com">
                     <arg_0_0 xmlns="">
                         <![CDATA[
         <FIXML xsi:schemaLocation="http://www.finacle.com/fixml executeFinacleScript.xsd" xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -61,7 +61,7 @@
         </FIXML>
         ]]>
                     </arg_0_0>
-                </executeService>
+                </executeChannelService>
             </Body>
         </Envelope>
                 <!--</arg_0_0>

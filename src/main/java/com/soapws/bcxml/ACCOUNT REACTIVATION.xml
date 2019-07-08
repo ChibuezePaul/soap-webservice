@@ -7,7 +7,7 @@
             <arg_0_0>-->
 <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
   <Body>
-    <executeService xmlns="http://webservice.fiusb.ci.infosys.com">
+    <executeReactivationService xmlns="http://webservice.fiusb.ci.infosys.com">
       <arg_0_0 xmlns="">
         <![CDATA[
         <FIXML xsi:schemaLocation="http://www.finacle.com/fixml executeFinacleScript.xsd" xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -56,7 +56,7 @@
         </FIXML>
         ]]>
       </arg_0_0>
-    </executeService>
+    </executeReactivationService>
   </Body>
 </Envelope>
 <!--</arg_0_0>
@@ -64,8 +64,6 @@
     </soapenv:Body>
 </soapenv:Envelope>-->
 
-
-ACCOUNT REACTIVATION
 
 
 <soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/"

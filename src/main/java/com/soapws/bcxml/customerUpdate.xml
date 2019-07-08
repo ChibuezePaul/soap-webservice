@@ -10,7 +10,7 @@
 
         <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
             <Body>
-                <executeService xmlns="http://webservice.fiusb.ci.infosys.com">
+                <executeCustUpdateService xmlns="http://webservice.fiusb.ci.infosys.com">
                     <arg_0_0 xmlns="">
                         <![CDATA[
                 <FIXML xsi:schemaLocation="http://www.finacle.com/fixml RetCustMod.xsd" xmlns="http://www.finacle.com/fixml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Header>
@@ -137,7 +137,7 @@
                 </FIXML>
                 ]]>
                     </arg_0_0>
-                </executeService>
+                </executeCustUpdateService>
             </Body>
         </Envelope>
                 <!--</arg_0_0>
