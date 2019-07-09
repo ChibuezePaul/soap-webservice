@@ -48,15 +48,15 @@ import javax.xml.bind.annotation.XmlType;
 public class RetCustModRs {
 
     @XmlElement(name = "CustId", required = true)
-    protected String custId;
+    protected String custId = "4243907";
     @XmlElement(name = "Desc", required = true)
-    protected String desc;
+    protected String desc = "Retail Customer successfully updated with CIFID 4243907";
     @XmlElement(name = "Entity", required = true)
-    protected String entity;
+    protected String entity = "Retail Customer";
     @XmlElement(name = "Service", required = true)
-    protected String service;
+    protected String service = "CIFRetailCustomerUpdate";
     @XmlElement(name = "Status", required = true)
-    protected String status;
+    protected String status = "SUCCESS";
 
     /**
      * Gets the value of the custId property.

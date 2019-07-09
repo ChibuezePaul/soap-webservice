@@ -8,7 +8,7 @@ import javax.annotation.PostConstruct;
 public class MandateRepository {
 
     @PostConstruct
-    public ExecuteServiceReturn setCustomAcctDetails(){
+    public ExecuteServiceReturn setMandateResponse(){
         return new ExecuteServiceReturn();
     }
 }

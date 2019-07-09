@@ -52,19 +52,19 @@ import javax.xml.bind.annotation.XmlType;
 public class SignatureAddRs {
 
     @XmlElement(name = "AcctId", required = true)
-    protected String acctId;
+    protected String acctId = "6201106012";
     @XmlElement(name = "AcctCode", required = true)
-    protected String acctCode;
+    protected String acctCode = "N";
     @XmlElement(name = "CustId", required = true)
-    protected String custId;
+    protected String custId = " ";
     @XmlElement(name = "EmployeeIdent", required = true)
-    protected String employeeIdent;
+    protected String employeeIdent = " ";
     @XmlElement(name = "BankCode", required = true)
-    protected String bankCode;
+    protected String bankCode = "01";
     @XmlElement(name = "SigPowerNum", required = true)
-    protected String sigPowerNum;
+    protected String sigPowerNum = "01";
     @XmlElement(name = "SigAddStatusCode", required = true)
-    protected String sigAddStatusCode;
+    protected String sigAddStatusCode = "true";
 
     /**
      * Gets the value of the acctId property.

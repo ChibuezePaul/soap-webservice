@@ -11,9 +11,7 @@ package com.soapws.webservice.mandate;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
@@ -46,12 +44,11 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class ResponseMessageInfo {
 
     @XmlElement(name = "BankId", required = true)
-    protected String bankId;
+    protected String bankId = "01";
     @XmlElement(name = "TimeZone", required = true)
-    protected String timeZone;
+    protected String timeZone = " ";
     @XmlElement(name = "MessageDateTime", required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar messageDateTime;
+    protected String messageDateTime = " ";
 
     /**
      * Gets the value of the bankId property.
@@ -106,10 +103,10 @@ public class ResponseMessageInfo {
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getMessageDateTime() {
+    public String getMessageDateTime() {
         return messageDateTime;
     }
 
@@ -118,10 +115,10 @@ public class ResponseMessageInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setMessageDateTime(XMLGregorianCalendar value) {
+    public void setMessageDateTime(String value) {
         this.messageDateTime = value;
     }
 

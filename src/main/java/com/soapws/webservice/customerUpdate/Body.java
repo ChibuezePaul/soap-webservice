@@ -40,7 +40,7 @@ import javax.xml.bind.annotation.XmlType;
 public class Body {
 
     @XmlElement(name = "RetCustModResponse", required = true)
-    protected RetCustModResponse retCustModResponse;
+    protected RetCustModResponse retCustModResponse = new RetCustModResponse();
 
     /**
      * Gets the value of the retCustModResponse property.

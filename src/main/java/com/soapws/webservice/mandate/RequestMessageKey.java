@@ -46,13 +46,13 @@ import javax.xml.bind.annotation.XmlType;
 public class RequestMessageKey {
 
     @XmlElement(name = "RequestUUID", required = true)
-    protected String requestUUID;
+    protected String requestUUID = " ";
     @XmlElement(name = "ServiceRequestId", required = true)
-    protected String serviceRequestId;
+    protected String serviceRequestId = " ";
     @XmlElement(name = "ServiceRequestVersion", required = true)
-    protected String serviceRequestVersion;
+    protected String serviceRequestVersion = "10.2";
     @XmlElement(name = "ChannelId", required = true)
-    protected String channelId;
+    protected String channelId = "COR";
 
     /**
      * Gets the value of the requestUUID property.

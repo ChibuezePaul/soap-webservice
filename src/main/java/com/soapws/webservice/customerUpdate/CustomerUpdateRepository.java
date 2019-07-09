@@ -8,7 +8,7 @@ import javax.annotation.PostConstruct;
 public class CustomerUpdateRepository {
 
     @PostConstruct
-    public ExecuteServiceReturn setCustomAcctDetails(){
+    public ExecuteServiceReturn setCustUpdateResponse(){
         return new ExecuteServiceReturn();
     }
 }

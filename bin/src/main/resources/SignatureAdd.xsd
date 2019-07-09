@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://webservice.fiusb.ci.infosys.com"
+           targetNamespace="http://webservice.fiusb.ci.infosys.com" elementFormDefault="qualified">
+
+    <xs:element name="executeMandateService">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="arg_0_0" type="tns:arg_0_0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="arg_0_0">
+        <xs:sequence>
+            <xs:element name="FIXML" type="tns:FIXML" xsi:schemaLocation=""/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:element name="executeServiceResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="executeServiceReturn" type="tns:executeServiceReturn"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="executeServiceReturn">
+        <xs:sequence>
+            <xs:element name="FIXML" type="tns:FIXML" xsi:schemaLocation=""/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="FIXML">
+        <xs:sequence>
+            <xs:element name="Header" type="tns:Header"/>
+            <xs:element name="Body" type="tns:Body"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Header">
+        <xs:sequence>
+            <xs:element name="ResponseHeader" type="tns:ResponseHeader"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ResponseHeader">
+        <xs:sequence>
+            <xs:element name="RequestMessageKey" type="tns:RequestMessageKey" />
+            <xs:element name="ResponseMessageInfo" type="tns:ResponseMessageInfo"/>
+            <xs:element name="UBUSTransaction" type="tns:UBUSTransaction"/>
+            <xs:element name="HostTransaction" type="tns:HostTransaction"/>
+            <xs:element name="HostParentTransaction" type="tns:HostParentTransaction"/>
+            <xs:element name="CustomInfo" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="RequestMessageKey">
+        <xs:sequence>
+            <xs:element name="RequestUUID" type="xs:string"/>
+            <xs:element name="ServiceRequestId" type="xs:string"/>
+            <xs:element name="ServiceRequestVersion" type="xs:string"/>
+            <xs:element name="ChannelId" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+
+    <xs:complexType name="ResponseMessageInfo">
+        <xs:sequence>
+            <xs:element name="BankId" type="xs:string" />
+            <xs:element name="TimeZone" type="xs:string" />
+            <xs:element name="MessageDateTime" type="xs:date" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="UBUSTransaction">
+        <xs:sequence>
+            <xs:element name="Id" type="xs:string" />
+            <xs:element name="Status" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HostTransaction">
+        <xs:sequence>
+            <xs:element name="Id" type="xs:string" />
+            <xs:element name="Status" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="HostParentTransaction">
+        <xs:sequence>
+            <xs:element name="Id" type="xs:string" />
+            <xs:element name="Status" type="xs:string" />
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Body">
+        <xs:sequence>
+            <xs:element name="SignatureAddResponse" type="tns:SignatureAddResponse"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SignatureAddResponse">
+        <xs:sequence>
+            <xs:element name="SignatureAddRs" type="tns:SignatureAddRs"/>
+            <xs:element name="SignatureAdd_CustomData" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="SignatureAddRs">
+        <xs:sequence>
+            <xs:element name="AcctId" type="xs:string"/>
+            <xs:element name="AcctCode" type="xs:string"/>
+            <xs:element name="CustId" type="xs:string"/>
+            <xs:element name="EmployeeIdent" type="xs:string"/>
+            <xs:element name="BankCode" type="xs:string"/>
+            <xs:element name="SigPowerNum" type="xs:string"/>
+            <xs:element name="SigAddStatusCode" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+</xs:schema>

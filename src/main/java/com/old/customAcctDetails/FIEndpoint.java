@@ -25,7 +25,7 @@ public class FIEndpoint {
 
         ExecuteServiceResponse response = new ExecuteServiceResponse();
 
-//        response.setFIXML(repository.setCustomAcctDetails(request));
+//        response.setFIXML(repository.setMandateResponse(request));
 
         return response;
     }
