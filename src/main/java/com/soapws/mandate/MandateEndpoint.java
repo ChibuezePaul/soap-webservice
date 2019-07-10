@@ -6,15 +6,15 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
-@Endpoint
+//@Endpoint
 public class MandateEndpoint {
     private static final String NAMESPACE_URI = "http://webservice.fiusb.ci.infosys.com";
 
     @Autowired
     private MandateRepository repository;
 
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeMandateService")
-    @ResponsePayload
+//    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeMandateService")
+//    @ResponsePayload
     public ExecuteServiceResponse getMandateService(@RequestPayload ExecuteMandateService request) {
 
         ExecuteServiceResponse response = new ExecuteServiceResponse();

@@ -6,15 +6,15 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
-@Endpoint
+//@Endpoint
 public class CustomerUpdateEndpoint {
     private static final String NAMESPACE_URI = "http://webservice.fiusb.ci.infosys.com";
 
     @Autowired
     private CustomerUpdateRepository repository;
 
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeCustUpdateService")
-    @ResponsePayload
+//    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeCustUpdateService")
+//    @ResponsePayload
     public ExecuteServiceResponse getCustUpdateService(@RequestPayload ExecuteCustUpdateService request) {
 
         ExecuteServiceResponse response = new ExecuteServiceResponse();
