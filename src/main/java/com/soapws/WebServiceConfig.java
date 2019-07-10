@@ -24,49 +24,49 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		return new ServletRegistrationBean(servlet, "/fi/*");
 	}
 
-	@Bean(name = "executeFinacleScript")
-	public DefaultWsdl11Definition executeFinacleScriptServiceWsdl11Definition(XsdSchema executeFinacleScriptservice) {
+	@Bean(name = "request")
+	public DefaultWsdl11Definition requestServiceWsdl11Definition(XsdSchema requestService) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("fiPort");
 		wsdl11Definition.setLocationUri("/fi");
 		wsdl11Definition.setTargetNamespace("http://webservice.fiusb.ci.infosys.com");
-		wsdl11Definition.setSchema(executeFinacleScriptservice);
+		wsdl11Definition.setSchema(requestService);
 		return wsdl11Definition;
 	}
 
 	@Bean
-	public XsdSchema executeFinacleScriptservice() {
-		return new SimpleXsdSchema(new ClassPathResource("executeFinacleScript.xsd"));
+	public XsdSchema requestService() {
+		return new SimpleXsdSchema(new ClassPathResource("request.xsd"));
 	}
 
-	@Bean(name = "RetCustMod")
-	public DefaultWsdl11Definition RetCustModServiceWsdl11Definition(XsdSchema RetCustMod) {
-		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-		wsdl11Definition.setPortTypeName("fiPort");
-		wsdl11Definition.setLocationUri("/fi");
-		wsdl11Definition.setTargetNamespace("http://webservice.fiusb.ci.infosys.com");
-		wsdl11Definition.setSchema(RetCustMod);
-		return wsdl11Definition;
-	}
-
-	@Bean
-	public XsdSchema RetCustMod() {
-		return new SimpleXsdSchema(new ClassPathResource("RetCustMod.xsd"));
-	}
-
-	@Bean(name = "SignatureAdd")
-	public DefaultWsdl11Definition SignatureAddServiceWsdl11Definition(XsdSchema SignatureAdd) {
-		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-		wsdl11Definition.setPortTypeName("fiPort");
-		wsdl11Definition.setLocationUri("/fi");
-		wsdl11Definition.setTargetNamespace("http://webservice.fiusb.ci.infosys.com");
-		wsdl11Definition.setSchema(SignatureAdd);
-		return wsdl11Definition;
-	}
-
-	@Bean
-	public XsdSchema SignatureAdd() {
-		return new SimpleXsdSchema(new ClassPathResource("SignatureAdd.xsd"));
-	}
+//	@Bean(name = "RetCustMod")
+//	public DefaultWsdl11Definition RetCustModServiceWsdl11Definition(XsdSchema RetCustMod) {
+//		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+//		wsdl11Definition.setPortTypeName("fiPort");
+//		wsdl11Definition.setLocationUri("/fi");
+//		wsdl11Definition.setTargetNamespace("http://webservice.fiusb.ci.infosys.com");
+//		wsdl11Definition.setSchema(RetCustMod);
+//		return wsdl11Definition;
+//	}
+//
+//	@Bean
+//	public XsdSchema RetCustMod() {
+//		return new SimpleXsdSchema(new ClassPathResource("RetCustMod.xsd"));
+//	}
+//
+//	@Bean(name = "SignatureAdd")
+//	public DefaultWsdl11Definition SignatureAddServiceWsdl11Definition(XsdSchema SignatureAdd) {
+//		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
+//		wsdl11Definition.setPortTypeName("fiPort");
+//		wsdl11Definition.setLocationUri("/fi");
+//		wsdl11Definition.setTargetNamespace("http://webservice.fiusb.ci.infosys.com");
+//		wsdl11Definition.setSchema(SignatureAdd);
+//		return wsdl11Definition;
+//	}
+//
+//	@Bean
+//	public XsdSchema SignatureAdd() {
+//		return new SimpleXsdSchema(new ClassPathResource("SignatureAdd.xsd"));
+//	}
 
 }

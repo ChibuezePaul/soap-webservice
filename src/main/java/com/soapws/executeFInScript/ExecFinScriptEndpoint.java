@@ -1,11 +1,7 @@
 package com.soapws.executeFInScript;
 
-import com.infosys.ci.fiusb.webservice.ExecuteService;
+import com.soapws.webservice.ExecuteService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ws.server.endpoint.annotation.Endpoint;
-import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
-import org.springframework.ws.server.endpoint.annotation.RequestPayload;
-import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 import org.xml.sax.InputSource;
 
 import javax.xml.bind.JAXBContext;
@@ -14,7 +10,7 @@ import javax.xml.bind.Marshaller;
 import java.io.StringReader;
 import java.io.StringWriter;
 
-@Endpoint
+//@Endpoint
 public class ExecFinScriptEndpoint {
     private static final String NAMESPACE_URI = "http://webservice.fiusb.ci.infosys.com";
 
@@ -23,19 +19,19 @@ public class ExecFinScriptEndpoint {
 
     ExecuteServiceResponse serviceResponse = new ExecuteServiceResponse();
 
-    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeService")
-    @ResponsePayload
-    public ExecuteServiceResponse getRequest(@RequestPayload ExecuteService request) throws JAXBException {
+//    @PayloadRoot(namespace = NAMESPACE_URI, localPart = "executeService")
+//    @ResponsePayload
+    public ExecuteServiceResponse getRequest(/*@RequestPayload ExecuteService request*/) throws JAXBException {
 
-        if (jaxbObjectToXML(new ExecuteService("","customHol.scr"), "customHol.scr")) {
-            serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1507286630051", "CRM", null, null, "YYNNNN", "YYYYNNNNYYNNNNNYYNNNNNYYNNNNNY"));
-            return serviceResponse;
-        }
-        else if (jaxbObjectToXML((new ExecuteService("","customAckChq.scr")), "customAckChq.scr")){
-            serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1561732112117","CRM",null,null,null,null));
-
-            return serviceResponse;
-        }
+//        if (jaxbObjectToXML(new ExecuteService("","customHol.scr"), "customHol.scr")) {
+//            serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1507286630051", "CRM", null, null, "YYNNNN", "YYYYNNNNYYNNNNNYYNNNNNYYNNNNNY"));
+//            return serviceResponse;
+//        }
+//        else if (jaxbObjectToXML((new ExecuteService("","customAckChq.scr")), "customAckChq.scr")){
+//            serviceResponse.setExecuteServiceReturn(repository.createServiceReturn("Req_1561732112117","CRM",null,null,null,null));
+//
+//            return serviceResponse;
+//        }
         return new ExecuteServiceResponse();
     }
 //

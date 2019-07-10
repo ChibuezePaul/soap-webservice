@@ -6,7 +6,7 @@ import javax.xml.datatype.DatatypeConfigurationException;
 import javax.xml.datatype.DatatypeFactory;
 import java.util.GregorianCalendar;
 
-@Component
+//@Component
 public class ExecFinScriptRepository {
 
     protected String messageDateTime;
