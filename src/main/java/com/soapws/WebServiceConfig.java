@@ -12,7 +12,6 @@ import org.springframework.ws.wsdl.wsdl11.DefaultWsdl11Definition;
 import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
-@SuppressWarnings("ALL")
 @EnableWs
 @Configuration
 public class WebServiceConfig extends WsConfigurerAdapter {
@@ -38,35 +37,4 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	public XsdSchema requestService() {
 		return new SimpleXsdSchema(new ClassPathResource("request.xsd"));
 	}
-
-//	@Bean(name = "RetCustMod")
-//	public DefaultWsdl11Definition RetCustModServiceWsdl11Definition(XsdSchema RetCustMod) {
-//		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-//		wsdl11Definition.setPortTypeName("fiPort");
-//		wsdl11Definition.setLocationUri("/fi");
-//		wsdl11Definition.setTargetNamespace("http://webservice.fiusb.ci.infosys.com");
-//		wsdl11Definition.setSchema(RetCustMod);
-//		return wsdl11Definition;
-//	}
-//
-//	@Bean
-//	public XsdSchema RetCustMod() {
-//		return new SimpleXsdSchema(new ClassPathResource("RetCustMod.xsd"));
-//	}
-//
-//	@Bean(name = "SignatureAdd")
-//	public DefaultWsdl11Definition SignatureAddServiceWsdl11Definition(XsdSchema SignatureAdd) {
-//		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-//		wsdl11Definition.setPortTypeName("fiPort");
-//		wsdl11Definition.setLocationUri("/fi");
-//		wsdl11Definition.setTargetNamespace("http://webservice.fiusb.ci.infosys.com");
-//		wsdl11Definition.setSchema(SignatureAdd);
-//		return wsdl11Definition;
-//	}
-//
-//	@Bean
-//	public XsdSchema SignatureAdd() {
-//		return new SimpleXsdSchema(new ClassPathResource("SignatureAdd.xsd"));
-//	}
-
 }

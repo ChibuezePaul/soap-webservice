@@ -17,6 +17,9 @@ public class ExecuteServiceEndpoint {
     @PayloadRoot(namespace = "http://webservice.fiusb.ci.infosys.com", localPart = "executeService")
     @ResponsePayload
     public ExecuteServiceResponse getRequest(@RequestPayload ExecuteService request) {
+
+//        DefaultHttpClient httpClient = new DefaultHttpClient();
+
         return new ExecuteServiceResponse();
     }
 
