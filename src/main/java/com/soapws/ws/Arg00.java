@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -65,5 +65,11 @@ public class Arg00 {
     public void setFIXML(FIXML value) {
         this.fixml = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "Arg00{" +
+              "fixml=" + fixml +
+              '}';
+    }
 }

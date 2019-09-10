@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -48,15 +48,15 @@ import javax.xml.bind.annotation.XmlType;
 public class ExecuteFinacleScriptCustomData {
 
     @XmlElement(required = true)
-    protected String signId = "FCMBFIN7696223";
+    protected String signId;// = "FCMBFIN7696223";
     @XmlElement(name = "SuccessOrFailure", required = true)
-    protected String successOrFailure = "SUCCESS";
+    protected String successOrFailure;// = "SUCCESS";
     @XmlElement(required = true)
-    protected String mainHol = "YYNNNN";
+    protected String mainHol;// = "YYNNNN";
     @XmlElement(required = true)
-    protected String prevHol = "YYYYNNNNYYNNNNNYYNNNNNYYNNNNNY";
+    protected String prevHol;// = "YYYYNNNNYYNNNNNYYNNNNNYYNNNNNY";
     @XmlElement(name = "LienB2kId", required = true)
-    protected String lienB2KId = "01183256054";
+    protected String lienB2KId;// = "01183256054";
 
     /**
      * Gets the value of the signId property.
@@ -177,5 +177,15 @@ public class ExecuteFinacleScriptCustomData {
     public void setLienB2KId(String value) {
         this.lienB2KId = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "ExecuteFinacleScriptCustomData{" +
+              "signId='" + signId + '\'' +
+              ", successOrFailure='" + successOrFailure + '\'' +
+              ", mainHol='" + mainHol + '\'' +
+              ", prevHol='" + prevHol + '\'' +
+              ", lienB2KId='" + lienB2KId + '\'' +
+              '}';
+    }
 }

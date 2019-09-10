@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -42,9 +42,9 @@ import javax.xml.bind.annotation.XmlType;
 public class HostParentTransaction {
 
     @XmlElement(name = "Id", required = true)
-    protected String id = "";
+    protected String id;// = "";
     @XmlElement(name = "Status", required = true)
-    protected String status = "";
+    protected String status;// = "";
 
     /**
      * Gets the value of the id property.
@@ -93,5 +93,12 @@ public class HostParentTransaction {
     public void setStatus(String value) {
         this.status = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "HostParentTransaction{" +
+              "id='" + id + '\'' +
+              ", status='" + status + '\'' +
+              '}';
+    }
 }

@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,17 +15,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for HostTransaction complex type.
+ * <p>Java class for FIXML complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="HostTransaction">
+ * &lt;complexType name="FIXML">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Id" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="Status" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="Header" type="{http://webservice.fiusb.ci.infosys.com}Header"/>
+ *         &lt;element name="Body" type="{http://webservice.fiusb.ci.infosys.com}Body"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,63 +35,70 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "HostTransaction", propOrder = {
-    "id",
-    "status"
+@XmlType(name = "FIXML", propOrder = {
+    "header",
+    "body"
 })
-public class HostTransaction {
+public class FIXML {
 
-    @XmlElement(name = "Id", required = true)
-    protected String id = "";
-    @XmlElement(name = "Status", required = true)
-    protected String status =  "SUCCESS";
+    @XmlElement(name = "Header", required = true)
+    protected Header header;// = new Header();
+    @XmlElement(name = "Body", required = true)
+    protected Body body;// = new Body();
 
     /**
-     * Gets the value of the id property.
+     * Gets the value of the header property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Header }
      *     
      */
-    public String getId() {
-        return id;
+    public Header getHeader() {
+        return header;
     }
 
     /**
-     * Sets the value of the id property.
+     * Sets the value of the header property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Header }
      *     
      */
-    public void setId(String value) {
-        this.id = value;
+    public void setHeader(Header value) {
+        this.header = value;
     }
 
     /**
-     * Gets the value of the status property.
+     * Gets the value of the body property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Body }
      *     
      */
-    public String getStatus() {
-        return status;
+    public Body getBody() {
+        return body;
     }
 
     /**
-     * Sets the value of the status property.
+     * Sets the value of the body property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Body }
      *     
      */
-    public void setStatus(String value) {
-        this.status = value;
+    public void setBody(Body value) {
+        this.body = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "FIXML{" +
+              "header=" + header +
+              ", body=" + body +
+              '}';
+    }
 }

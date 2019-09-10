@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,17 +15,17 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for FIXML complex type.
+ * <p>Java class for UBUSTransaction complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="FIXML">
+ * &lt;complexType name="UBUSTransaction">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="Header" type="{http://webservice.fiusb.ci.infosys.com}Header"/>
- *         &lt;element name="Body" type="{http://webservice.fiusb.ci.infosys.com}Body"/>
+ *         &lt;element name="Id" type="{http://www.w3.org/2001/XMLSchema}string"/>
+ *         &lt;element name="Status" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,63 +35,70 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "FIXML", propOrder = {
-    "header",
-    "body"
+@XmlType(name = "UBUSTransaction", propOrder = {
+    "id",
+    "status"
 })
-public class FIXML {
+public class UBUSTransaction {
 
-    @XmlElement(name = "Header", required = true)
-    protected Header header = new Header();
-    @XmlElement(name = "Body", required = true)
-    protected Body body = new Body();
+    @XmlElement(name = "Id", required = true)
+    protected String id;// = "";
+    @XmlElement(name = "Status", required = true)
+    protected String status;// = "";
 
     /**
-     * Gets the value of the header property.
+     * Gets the value of the id property.
      * 
      * @return
      *     possible object is
-     *     {@link Header }
+     *     {@link String }
      *     
      */
-    public Header getHeader() {
-        return header;
+    public String getId() {
+        return id;
     }
 
     /**
-     * Sets the value of the header property.
+     * Sets the value of the id property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Header }
+     *     {@link String }
      *     
      */
-    public void setHeader(Header value) {
-        this.header = value;
+    public void setId(String value) {
+        this.id = value;
     }
 
     /**
-     * Gets the value of the body property.
+     * Gets the value of the status property.
      * 
      * @return
      *     possible object is
-     *     {@link Body }
+     *     {@link String }
      *     
      */
-    public Body getBody() {
-        return body;
+    public String getStatus() {
+        return status;
     }
 
     /**
-     * Sets the value of the body property.
+     * Sets the value of the status property.
      * 
      * @param value
      *     allowed object is
-     *     {@link Body }
+     *     {@link String }
      *     
      */
-    public void setBody(Body value) {
-        this.body = value;
+    public void setStatus(String value) {
+        this.status = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "UBUSTransaction{" +
+              "id='" + id + '\'' +
+              ", status='" + status + '\'' +
+              '}';
+    }
 }

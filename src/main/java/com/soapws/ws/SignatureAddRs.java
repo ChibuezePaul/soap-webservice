@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -52,19 +52,19 @@ import javax.xml.bind.annotation.XmlType;
 public class SignatureAddRs {
 
     @XmlElement(name = "AcctId", required = true)
-    protected String acctId = "6201106012";
+    protected String acctId;// = "6201106012";
     @XmlElement(name = "AcctCode", required = true)
-    protected String acctCode = "N";
+    protected String acctCode;// = "N";
     @XmlElement(name = "CustId", required = true)
-    protected String custId = " ";
+    protected String custId;// = " ";
     @XmlElement(name = "EmployeeIdent", required = true)
-    protected String employeeIdent = " ";
+    protected String employeeIdent;// = " ";
     @XmlElement(name = "BankCode", required = true)
-    protected String bankCode = "01";
+    protected String bankCode;// = "01";
     @XmlElement(name = "SigPowerNum", required = true)
-    protected String sigPowerNum = "01";
+    protected String sigPowerNum;// = "01";
     @XmlElement(name = "SigAddStatusCode", required = true)
-    protected String sigAddStatusCode = "true";
+    protected String sigAddStatusCode;// = "true";
 
     /**
      * Gets the value of the acctId property.
@@ -233,5 +233,17 @@ public class SignatureAddRs {
     public void setSigAddStatusCode(String value) {
         this.sigAddStatusCode = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "SignatureAddRs{" +
+              "acctId='" + acctId + '\'' +
+              ", acctCode='" + acctCode + '\'' +
+              ", custId='" + custId + '\'' +
+              ", employeeIdent='" + employeeIdent + '\'' +
+              ", bankCode='" + bankCode + '\'' +
+              ", sigPowerNum='" + sigPowerNum + '\'' +
+              ", sigAddStatusCode='" + sigAddStatusCode + '\'' +
+              '}';
+    }
 }

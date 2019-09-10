@@ -6,25 +6,26 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for executeServiceReturn complex type.
+ * <p>Java class for anonymous complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="executeServiceReturn">
+ * &lt;complexType>
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="FIXML" type="{http://webservice.fiusb.ci.infosys.com}FIXML"/>
+ *         &lt;element name="executeServiceReturn" type="{http://webservice.fiusb.ci.infosys.com}executeServiceReturn"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -34,36 +35,37 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "executeServiceReturn", propOrder = {
-    "fixml"
+@XmlType(name = "", propOrder = {
+    "executeServiceReturn"
 })
-public class ExecuteServiceReturn {
+@XmlRootElement(name = "executeServiceResponse")
+public class ExecuteServiceResponse {
 
-    @XmlElement(name = "FIXML", required = true)
-    protected FIXML fixml = new FIXML();
+    @XmlElement(required = true)
+    protected ExecuteServiceReturn executeServiceReturn;// = new ExecuteServiceReturn();
 
     /**
-     * Gets the value of the fixml property.
+     * Gets the value of the executeServiceReturn property.
      * 
      * @return
      *     possible object is
-     *     {@link FIXML }
+     *     {@link ExecuteServiceReturn }
      *     
      */
-    public FIXML getFIXML() {
-        return fixml;
+    public ExecuteServiceReturn getExecuteServiceReturn() {
+        return executeServiceReturn;
     }
 
     /**
-     * Sets the value of the fixml property.
+     * Sets the value of the executeServiceReturn property.
      * 
      * @param value
      *     allowed object is
-     *     {@link FIXML }
+     *     {@link ExecuteServiceReturn }
      *     
      */
-    public void setFIXML(FIXML value) {
-        this.fixml = value;
+    public void setExecuteServiceReturn(ExecuteServiceReturn value) {
+        this.executeServiceReturn = value;
     }
 
 }

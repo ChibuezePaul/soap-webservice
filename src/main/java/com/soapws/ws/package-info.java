@@ -6,4 +6,4 @@
 //
 
 @javax.xml.bind.annotation.XmlSchema(namespace = "http://webservice.fiusb.ci.infosys.com", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
-package com.soapws.webservice;
+package com.soapws.ws;

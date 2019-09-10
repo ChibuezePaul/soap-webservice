@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -42,9 +42,9 @@ import javax.xml.bind.annotation.XmlType;
 public class RetCustModResponse {
 
     @XmlElement(name = "RetCustModRs", required = true)
-    protected RetCustModRs retCustModRs = new RetCustModRs();
+    protected RetCustModRs retCustModRs;// = new RetCustModRs();
     @XmlElement(name = "RetCustMod_CustomData", required = true)
-    protected String retCustModCustomData = "";
+    protected String retCustModCustomData;// = "";
 
     /**
      * Gets the value of the retCustModRs property.
@@ -93,5 +93,12 @@ public class RetCustModResponse {
     public void setRetCustModCustomData(String value) {
         this.retCustModCustomData = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "RetCustModResponse{" +
+              "retCustModRs=" + retCustModRs +
+              ", retCustModCustomData='" + retCustModCustomData + '\'' +
+              '}';
+    }
 }

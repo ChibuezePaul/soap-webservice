@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -48,15 +48,15 @@ import javax.xml.bind.annotation.XmlType;
 public class RetCustModRs {
 
     @XmlElement(name = "CustId", required = true)
-    protected String custId = "6208227";
+    protected String custId;// = "6208227";
     @XmlElement(name = "Desc", required = true)
-    protected String desc = "Retail Customer successfully updated with CIFID 6208227";
+    protected String desc;// = "Retail Customer successfully updated with CIFID 6208227";
     @XmlElement(name = "Entity", required = true)
-    protected String entity = "Retail Customer";
+    protected String entity;// = "Retail Customer";
     @XmlElement(name = "Service", required = true)
-    protected String service = "CIFRetailCustomerUpdate";
+    protected String service;// = "CIFRetailCustomerUpdate";
     @XmlElement(name = "Status", required = true)
-    protected String status = "SUCCESS";
+    protected String status;// = "SUCCESS";
 
     /**
      * Gets the value of the custId property.
@@ -177,5 +177,15 @@ public class RetCustModRs {
     public void setStatus(String value) {
         this.status = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "RetCustModRs{" +
+              "custId='" + custId + '\'' +
+              ", desc='" + desc + '\'' +
+              ", entity='" + entity + '\'' +
+              ", service='" + service + '\'' +
+              ", status='" + status + '\'' +
+              '}';
+    }
 }

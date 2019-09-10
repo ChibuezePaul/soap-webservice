@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,16 +15,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Header complex type.
+ * <p>Java class for executeServiceReturn complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="Header">
+ * &lt;complexType name="executeServiceReturn">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="ResponseHeader" type="{http://webservice.fiusb.ci.infosys.com}ResponseHeader"/>
+ *         &lt;element name="FIXML" type="{http://webservice.fiusb.ci.infosys.com}FIXML"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -34,36 +34,36 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Header", propOrder = {
-    "responseHeader"
+@XmlType(name = "executeServiceReturn", propOrder = {
+    "fixml"
 })
-public class Header {
+public class ExecuteServiceReturn {
 
-    @XmlElement(name = "ResponseHeader", required = true)
-    protected ResponseHeader responseHeader = new ResponseHeader();
+    @XmlElement(name = "FIXML", required = true)
+    protected FIXML fixml;// = new FIXML();
 
     /**
-     * Gets the value of the responseHeader property.
+     * Gets the value of the fixml property.
      * 
      * @return
      *     possible object is
-     *     {@link ResponseHeader }
+     *     {@link FIXML }
      *     
      */
-    public ResponseHeader getResponseHeader() {
-        return responseHeader;
+    public FIXML getFIXML() {
+        return fixml;
     }
 
     /**
-     * Sets the value of the responseHeader property.
+     * Sets the value of the fixml property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ResponseHeader }
+     *     {@link FIXML }
      *     
      */
-    public void setResponseHeader(ResponseHeader value) {
-        this.responseHeader = value;
+    public void setFIXML(FIXML value) {
+        this.fixml = value;
     }
 
 }

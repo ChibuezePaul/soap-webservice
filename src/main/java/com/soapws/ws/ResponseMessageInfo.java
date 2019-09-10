@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -47,9 +47,9 @@ import java.util.GregorianCalendar;
 public class ResponseMessageInfo {
 
     @XmlElement(name = "BankId", required = true)
-    protected String bankId = "01";
+    protected String bankId;// = "01";
     @XmlElement(name = "TimeZone", required = true)
-    protected String timeZone = " ";
+    protected String timeZone;// = " ";
     @XmlElement(name = "MessageDateTime", required = true)
     protected String messageDateTime;
 
@@ -132,5 +132,13 @@ public class ResponseMessageInfo {
     public void setMessageDateTime(String value) {
         this.messageDateTime = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "ResponseMessageInfo{" +
+              "bankId='" + bankId + '\'' +
+              ", timeZone='" + timeZone + '\'' +
+              ", messageDateTime='" + messageDateTime + '\'' +
+              '}';
+    }
 }

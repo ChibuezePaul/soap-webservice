@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -46,13 +46,13 @@ import javax.xml.bind.annotation.XmlType;
 public class RequestMessageKey {
 
     @XmlElement(name = "RequestUUID", required = true)
-    protected String requestUUID = "Req_1507303907459";
+    protected String requestUUID;// = "Req_1507303907459";
     @XmlElement(name = "ServiceRequestId", required = true)
-    protected String serviceRequestId = "executeFinacleScript";
+    protected String serviceRequestId;// = "executeFinacleScript";
     @XmlElement(name = "ServiceRequestVersion", required = true)
-    protected String serviceRequestVersion = "10.2";
+    protected String serviceRequestVersion;// = "10.2";
     @XmlElement(name = "ChannelId", required = true)
-    protected String channelId = "CRM";
+    protected String channelId;// = "CRM";
 
     /**
      * Gets the value of the requestUUID property.
@@ -149,5 +149,14 @@ public class RequestMessageKey {
     public void setChannelId(String value) {
         this.channelId = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "RequestMessageKey{" +
+              "requestUUID='" + requestUUID + '\'' +
+              ", serviceRequestId='" + serviceRequestId + '\'' +
+              ", serviceRequestVersion='" + serviceRequestVersion + '\'' +
+              ", channelId='" + channelId + '\'' +
+              '}';
+    }
 }

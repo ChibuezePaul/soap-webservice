@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -44,11 +44,11 @@ import javax.xml.bind.annotation.XmlType;
 public class Body {
 
     @XmlElement(required = true)
-    protected ExecuteFinacleScriptResponse executeFinacleScriptResponse = new ExecuteFinacleScriptResponse();
+    protected ExecuteFinacleScriptResponse executeFinacleScriptResponse;// = new ExecuteFinacleScriptResponse();
     @XmlElement(name = "RetCustModResponse", required = true)
-    protected RetCustModResponse retCustModResponse = new RetCustModResponse();
+    protected RetCustModResponse retCustModResponse;// = new RetCustModResponse();
     @XmlElement(name = "SignatureAddResponse", required = true)
-    protected SignatureAddResponse signatureAddResponse = new SignatureAddResponse();
+    protected SignatureAddResponse signatureAddResponse;// = new SignatureAddResponse();
 
     /**
      * Gets the value of the executeFinacleScriptResponse property.
@@ -121,5 +121,13 @@ public class Body {
     public void setSignatureAddResponse(SignatureAddResponse value) {
         this.signatureAddResponse = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "Body{" +
+              "executeFinacleScriptResponse=" + executeFinacleScriptResponse +
+              ", retCustModResponse=" + retCustModResponse +
+              ", signatureAddResponse=" + signatureAddResponse +
+              '}';
+    }
 }

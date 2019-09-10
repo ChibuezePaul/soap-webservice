@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -15,12 +15,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for UBUSTransaction complex type.
+ * <p>Java class for HostTransaction complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="UBUSTransaction">
+ * &lt;complexType name="HostTransaction">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -35,16 +35,16 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "UBUSTransaction", propOrder = {
+@XmlType(name = "HostTransaction", propOrder = {
     "id",
     "status"
 })
-public class UBUSTransaction {
+public class HostTransaction {
 
     @XmlElement(name = "Id", required = true)
-    protected String id = "";
+    protected String id;// = "";
     @XmlElement(name = "Status", required = true)
-    protected String status = "";
+    protected String status;// =  "SUCCESS";
 
     /**
      * Gets the value of the id property.
@@ -93,5 +93,12 @@ public class UBUSTransaction {
     public void setStatus(String value) {
         this.status = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "HostTransaction{" +
+              "id='" + id + '\'' +
+              ", status='" + status + '\'' +
+              '}';
+    }
 }

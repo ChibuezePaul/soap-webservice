@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -50,17 +50,17 @@ import javax.xml.bind.annotation.XmlType;
 public class ResponseHeader {
 
     @XmlElement(name = "RequestMessageKey", required = true)
-    protected RequestMessageKey requestMessageKey = new RequestMessageKey();
+    protected RequestMessageKey requestMessageKey;// = new RequestMessageKey();
     @XmlElement(name = "ResponseMessageInfo", required = true)
-    protected ResponseMessageInfo responseMessageInfo = new ResponseMessageInfo();
+    protected ResponseMessageInfo responseMessageInfo;// = new ResponseMessageInfo();
     @XmlElement(name = "UBUSTransaction", required = true)
-    protected UBUSTransaction ubusTransaction = new UBUSTransaction();
+    protected UBUSTransaction ubusTransaction;// = new UBUSTransaction();
     @XmlElement(name = "HostTransaction", required = true)
-    protected HostTransaction hostTransaction = new HostTransaction();
+    protected HostTransaction hostTransaction;// = new HostTransaction();
     @XmlElement(name = "HostParentTransaction", required = true)
-    protected HostParentTransaction hostParentTransaction = new HostParentTransaction();
+    protected HostParentTransaction hostParentTransaction;// = new HostParentTransaction();
     @XmlElement(name = "CustomInfo", required = true)
-    protected String customInfo = "";
+    protected String customInfo;// = "";
 
     /**
      * Gets the value of the requestMessageKey property.
@@ -205,5 +205,16 @@ public class ResponseHeader {
     public void setCustomInfo(String value) {
         this.customInfo = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "ResponseHeader{" +
+              "requestMessageKey=" + requestMessageKey +
+              ", responseMessageInfo=" + responseMessageInfo +
+              ", ubusTransaction=" + ubusTransaction +
+              ", hostTransaction=" + hostTransaction +
+              ", hostParentTransaction=" + hostParentTransaction +
+              ", customInfo='" + customInfo + '\'' +
+              '}';
+    }
 }

@@ -6,7 +6,7 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -42,9 +42,9 @@ import javax.xml.bind.annotation.XmlType;
 public class SignatureAddResponse {
 
     @XmlElement(name = "SignatureAddRs", required = true)
-    protected SignatureAddRs signatureAddRs = new SignatureAddRs();
+    protected SignatureAddRs signatureAddRs;// = new SignatureAddRs();
     @XmlElement(name = "SignatureAdd_CustomData", required = true)
-    protected String signatureAddCustomData = "";
+    protected String signatureAddCustomData;// = "";
 
     /**
      * Gets the value of the signatureAddRs property.
@@ -93,5 +93,12 @@ public class SignatureAddResponse {
     public void setSignatureAddCustomData(String value) {
         this.signatureAddCustomData = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "SignatureAddResponse{" +
+              "signatureAddRs=" + signatureAddRs +
+              ", signatureAddCustomData='" + signatureAddCustomData + '\'' +
+              '}';
+    }
 }

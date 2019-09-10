@@ -6,26 +6,25 @@
 //
 
 
-package com.soapws.webservice;
+package com.soapws.ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>Java class for Header complex type.
  * 
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType>
+ * &lt;complexType name="Header">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="executeServiceReturn" type="{http://webservice.fiusb.ci.infosys.com}executeServiceReturn"/>
+ *         &lt;element name="ResponseHeader" type="{http://webservice.fiusb.ci.infosys.com}ResponseHeader"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,37 +34,42 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "executeServiceReturn"
+@XmlType(name = "Header", propOrder = {
+    "responseHeader"
 })
-@XmlRootElement(name = "executeServiceResponse")
-public class ExecuteServiceResponse {
+public class Header {
 
-    @XmlElement(required = true)
-    protected ExecuteServiceReturn executeServiceReturn = new ExecuteServiceReturn();
+    @XmlElement(name = "ResponseHeader", required = true)
+    protected ResponseHeader responseHeader;// = new ResponseHeader();
 
     /**
-     * Gets the value of the executeServiceReturn property.
+     * Gets the value of the responseHeader property.
      * 
      * @return
      *     possible object is
-     *     {@link ExecuteServiceReturn }
+     *     {@link ResponseHeader }
      *     
      */
-    public ExecuteServiceReturn getExecuteServiceReturn() {
-        return executeServiceReturn;
+    public ResponseHeader getResponseHeader() {
+        return responseHeader;
     }
 
     /**
-     * Sets the value of the executeServiceReturn property.
+     * Sets the value of the responseHeader property.
      * 
      * @param value
      *     allowed object is
-     *     {@link ExecuteServiceReturn }
+     *     {@link ResponseHeader }
      *     
      */
-    public void setExecuteServiceReturn(ExecuteServiceReturn value) {
-        this.executeServiceReturn = value;
+    public void setResponseHeader(ResponseHeader value) {
+        this.responseHeader = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "Header{" +
+              "responseHeader=" + responseHeader +
+              '}';
+    }
 }
