@@ -24,49 +24,33 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		return new ServletRegistrationBean(servlet, "/fi/*");
 	}
 
-	@Bean(name = "executeFinacleScript")
-	public DefaultWsdl11Definition executeFinacleScriptServiceWsdl11Definition(XsdSchema executeFinacleScriptservice) {
+	@Bean(name = "executeServiceRequest")
+	public DefaultWsdl11Definition executeFinacleScriptServiceWsdl11Definition(XsdSchema executeServiceRequest) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("fiPort");
 		wsdl11Definition.setLocationUri("/fi");
 		wsdl11Definition.setTargetNamespace("http://webservice.fiusb.ci.infosys.com");
-		wsdl11Definition.setSchema(executeFinacleScriptservice);
+		wsdl11Definition.setSchema(executeServiceRequest);
 		return wsdl11Definition;
 	}
 
 	@Bean
-	public XsdSchema executeFinacleScriptservice() {
-		return new SimpleXsdSchema(new ClassPathResource("executeFinacleScript.xsd"));
+	public XsdSchema executeServiceRequest() {
+		return new SimpleXsdSchema(new ClassPathResource("request.xsd"));
 	}
 
-	@Bean(name = "RetCustMod")
-	public DefaultWsdl11Definition RetCustModServiceWsdl11Definition(XsdSchema RetCustMod) {
+	@Bean(name = "executeServiceResponse")
+	public DefaultWsdl11Definition RetCustModServiceWsdl11Definition(XsdSchema executeServiceResponse) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("fiPort");
 		wsdl11Definition.setLocationUri("/fi");
 		wsdl11Definition.setTargetNamespace("http://webservice.fiusb.ci.infosys.com");
-		wsdl11Definition.setSchema(RetCustMod);
+		wsdl11Definition.setSchema(executeServiceResponse);
 		return wsdl11Definition;
 	}
 
 	@Bean
-	public XsdSchema RetCustMod() {
-		return new SimpleXsdSchema(new ClassPathResource("RetCustMod.xsd"));
+	public XsdSchema executeServiceResponse() {
+		return new SimpleXsdSchema(new ClassPathResource("response.xsd"));
 	}
-
-	@Bean(name = "SignatureAdd")
-	public DefaultWsdl11Definition SignatureAddServiceWsdl11Definition(XsdSchema SignatureAdd) {
-		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-		wsdl11Definition.setPortTypeName("fiPort");
-		wsdl11Definition.setLocationUri("/fi");
-		wsdl11Definition.setTargetNamespace("http://webservice.fiusb.ci.infosys.com");
-		wsdl11Definition.setSchema(SignatureAdd);
-		return wsdl11Definition;
-	}
-
-	@Bean
-	public XsdSchema SignatureAdd() {
-		return new SimpleXsdSchema(new ClassPathResource("SignatureAdd.xsd"));
-	}
-
 }
