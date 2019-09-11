@@ -1,4 +1,4 @@
-package com.soapws;
+package com.infosys.ci.fiusb.webservice;
 
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.ApplicationContext;
@@ -22,7 +22,7 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 	
 	@Override
 	public void addInterceptors ( List< EndpointInterceptor > interceptors ) {
-		interceptors.add (  );
+		interceptors.add ( new FIEndpointInterceptor () );
 	}
 	
 	@Bean
@@ -33,8 +33,8 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		return new ServletRegistrationBean(servlet, "/fi/*");
 	}
 
-	@Bean(name = "executeServiceRequest")
-	public DefaultWsdl11Definition executeFinacleScriptServiceWsdl11Definition(XsdSchema executeServiceRequest) {
+	@Bean(name = "request")
+	public DefaultWsdl11Definition executeServiceWsdl11Definition(XsdSchema executeServiceRequest) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("fiPort");
 		wsdl11Definition.setLocationUri("/fi");
@@ -48,8 +48,8 @@ public class WebServiceConfig extends WsConfigurerAdapter {
 		return new SimpleXsdSchema(new ClassPathResource("request.xsd"));
 	}
 
-	@Bean(name = "executeServiceResponse")
-	public DefaultWsdl11Definition RetCustModServiceWsdl11Definition(XsdSchema executeServiceResponse) {
+	@Bean(name = "response")
+	public DefaultWsdl11Definition response(XsdSchema executeServiceResponse) {
 		DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
 		wsdl11Definition.setPortTypeName("fiPort");
 		wsdl11Definition.setLocationUri("/fi");

@@ -2,7 +2,6 @@ package com.infosys.ci.fiusb.webservice;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ws.server.endpoint.annotation.Endpoint;
 import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
@@ -15,7 +14,7 @@ import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 public class FIEndpoint {
 	private static final String NAMESPACE_URI = "http://webservice.fiusb.ci.infosys.com";
 
-    @Autowired
+//    @Autowired
 //    private CustomerUpdateRepository repository;
 	
 	private final Logger logger = LoggerFactory.getLogger ( this.getClass () );
