@@ -65,5 +65,11 @@ public class Header {
     public void setRequestHeader(RequestHeader value) {
         this.requestHeader = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "Header{" +
+              "requestHeader=" + requestHeader +
+              '}';
+    }
 }

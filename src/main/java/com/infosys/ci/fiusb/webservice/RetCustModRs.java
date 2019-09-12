@@ -177,5 +177,15 @@ public class RetCustModRs {
     public void setStatus(String value) {
         this.status = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "RetCustModRs{" +
+              "custId='" + custId + '\'' +
+              ", desc='" + desc + '\'' +
+              ", entity='" + entity + '\'' +
+              ", service='" + service + '\'' +
+              ", status='" + status + '\'' +
+              '}';
+    }
 }

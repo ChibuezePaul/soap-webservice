@@ -67,5 +67,11 @@ public class ExecuteService {
     public void setArg00(Arg00 value) {
         this.arg00 = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "ExecuteService{" +
+              "arg00=" + arg00 +
+              '}';
+    }
 }

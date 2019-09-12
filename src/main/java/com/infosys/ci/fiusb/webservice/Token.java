@@ -93,5 +93,12 @@ public class Token {
     public void setPassword(String value) {
         this.password = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "Token{" +
+              "userId='" + userId + '\'' +
+              ", password='" + password + '\'' +
+              '}';
+    }
 }

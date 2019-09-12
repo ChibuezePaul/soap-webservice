@@ -205,5 +205,16 @@ public class Security {
     public void setSSOTransferToken(String value) {
         this.ssoTransferToken = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "Security{" +
+              "token=" + token +
+              ", fiCertToken='" + fiCertToken + '\'' +
+              ", realUserLoginSessionId='" + realUserLoginSessionId + '\'' +
+              ", realUser='" + realUser + '\'' +
+              ", realUserPwd='" + realUserPwd + '\'' +
+              ", ssoTransferToken='" + ssoTransferToken + '\'' +
+              '}';
+    }
 }

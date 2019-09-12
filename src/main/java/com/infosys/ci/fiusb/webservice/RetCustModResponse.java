@@ -93,5 +93,12 @@ public class RetCustModResponse {
     public void setRetCustModCustomData(String value) {
         this.retCustModCustomData = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "RetCustModResponse{" +
+              "retCustModRs=" + retCustModRs +
+              ", retCustModCustomData='" + retCustModCustomData + '\'' +
+              '}';
+    }
 }

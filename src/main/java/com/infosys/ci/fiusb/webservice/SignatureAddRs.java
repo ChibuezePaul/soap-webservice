@@ -233,5 +233,17 @@ public class SignatureAddRs {
     public void setSigAddStatusCode(String value) {
         this.sigAddStatusCode = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "SignatureAddRs{" +
+              "acctId='" + acctId + '\'' +
+              ", acctCode='" + acctCode + '\'' +
+              ", custId='" + custId + '\'' +
+              ", employeeIdent='" + employeeIdent + '\'' +
+              ", bankCode='" + bankCode + '\'' +
+              ", sigPowerNum='" + sigPowerNum + '\'' +
+              ", sigAddStatusCode='" + sigAddStatusCode + '\'' +
+              '}';
+    }
 }

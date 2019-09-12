@@ -149,5 +149,14 @@ public class MessageKey {
     public void setChannelId(String value) {
         this.channelId = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "MessageKey{" +
+              "requestUUID='" + requestUUID + '\'' +
+              ", serviceRequestId='" + serviceRequestId + '\'' +
+              ", serviceRequestVersion='" + serviceRequestVersion + '\'' +
+              ", channelId='" + channelId + '\'' +
+              '}';
+    }
 }

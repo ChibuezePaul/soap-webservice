@@ -93,5 +93,12 @@ public class FIXML {
     public void setBody(Body value) {
         this.body = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "FIXML{" +
+              "header=" + header +
+              ", body=" + body +
+              '}';
+    }
 }

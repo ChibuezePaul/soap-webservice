@@ -93,5 +93,12 @@ public class ExecuteFinacleScriptResponse {
     public void setExecuteFinacleScriptCustomData(ExecuteFinacleScriptCustomData value) {
         this.executeFinacleScriptCustomData = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "ExecuteFinacleScriptResponse{" +
+              "executeFinacleScriptOutputVO=" + executeFinacleScriptOutputVO +
+              ", executeFinacleScriptCustomData=" + executeFinacleScriptCustomData +
+              '}';
+    }
 }

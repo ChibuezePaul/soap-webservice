@@ -93,5 +93,12 @@ public class SignatureAddResponse {
     public void setSignatureAddCustomData(String value) {
         this.signatureAddCustomData = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "SignatureAddResponse{" +
+              "signatureAddRs=" + signatureAddRs +
+              ", signatureAddCustomData='" + signatureAddCustomData + '\'' +
+              '}';
+    }
 }

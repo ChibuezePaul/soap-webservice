@@ -124,5 +124,13 @@ public class RequestMessageInfo {
     public void setMessageDateTime(XMLGregorianCalendar value) {
         this.messageDateTime = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "RequestMessageInfo{" +
+              "bankId='" + bankId + '\'' +
+              ", timeZone='" + timeZone + '\'' +
+              ", messageDateTime=" + messageDateTime +
+              '}';
+    }
 }

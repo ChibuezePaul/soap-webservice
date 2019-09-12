@@ -121,5 +121,13 @@ public class ExecuteFinacleScriptCustomData {
     public void setLienB2KId(String value) {
         this.lienB2KId = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "ExecuteFinacleScriptCustomData{" +
+              "signId='" + signId + '\'' +
+              ", successOrFailure='" + successOrFailure + '\'' +
+              ", lienB2KId='" + lienB2KId + '\'' +
+              '}';
+    }
 }

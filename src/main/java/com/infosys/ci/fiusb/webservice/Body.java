@@ -121,5 +121,13 @@ public class Body {
     public void setRetCustModResponse(RetCustModResponse value) {
         this.retCustModResponse = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "Body{" +
+              "signatureAddResponse=" + signatureAddResponse +
+              ", executeFinacleScriptResponse=" + executeFinacleScriptResponse +
+              ", retCustModResponse=" + retCustModResponse +
+              '}';
+    }
 }

@@ -65,5 +65,11 @@ public class Arg00 {
     public void setFIXML(FIXML value) {
         this.fixml = value;
     }
-
+    
+    @Override
+    public String toString () {
+        return "Arg00{" +
+              "fixml=" + fixml +
+              '}';
+    }
 }
